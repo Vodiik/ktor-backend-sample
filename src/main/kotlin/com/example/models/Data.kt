@@ -2,37 +2,64 @@ package com.example.models
 
 import kotlinx.serialization.Serializable
 
+private const val BASE_URL = "http://192.168.0.190:8080"
+
 @Serializable
 data class Data(
     var dataID: String,
     var price: Int,
     var owner: String,
-    var image: String
+    var imageUrl: String
 )
 
 val dataStorage = listOf(
     Data(
-        "0",
+        "1",
         1,
         "user1",
-        "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
-    ),
-    Data(
-        "1",
-        2,
-        "user1",
-        "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
+        "$BASE_URL/images/test1.jpg"
     ),
     Data(
         "2",
-        3,
-        "user2",
-        "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
+        2,
+        "user1",
+        "$BASE_URL/images/test1.jpg"
     ),
     Data(
         "3",
+        3,
+        "user2",
+        "$BASE_URL/images/test1.jpg"
+    ),
+    Data(
+        "4",
         4,
         "user2",
-        "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
+        "$BASE_URL/images/test2.jpeg"
+    ),
+    Data(
+        "5",
+        1,
+        "user1",
+        "$BASE_URL/images/test1.jpg"
+    ),
+    Data(
+        "6",
+        2,
+        "user1",
+        "$BASE_URL/images/test1.jpg"
+    ),
+    Data(
+        "7",
+        3,
+        "user2",
+        "$BASE_URL/images/test1.jpg"
+    ),
+    Data(
+        "8",
+        4,
+        "user2",
+        "$BASE_URL/images/test2.jpeg"
     )
+
 )

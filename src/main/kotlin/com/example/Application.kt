@@ -10,7 +10,10 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
         configureRouting()
     }.start(wait = true)
 }*/
+
+@Suppress("unused")
 fun Application.module() {
     configureRouting()
     configureSerialization()
+    configureMonitoring()
 }
